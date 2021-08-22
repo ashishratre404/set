@@ -1,0 +1,58 @@
+SETS:
+    -- Unorderd, unindexed
+    -- Mutable
+    -- No Duplicate Item
+    -- it contain immutable items only, means we can contain int,float,string and even tuple inside set but 
+       we can't contain list inside set and no any Mutable item inside set
+    -- Represented by {}, but assigning empty {} is not set it becomes dictionay, empty set can be created by set()
+        => a = {}                : it is dictionay
+        => a = {a, b, n, r, y}   : it is set
+        => a = {a:b, c:d}        : it is dictionay
+        => a = set()             : it is set
+        => a = dict()            : it is dictionay
+
+Creation:
+    1. x = {value1, value2, value3, ...........}
+    2. x = set(iterable)
+
+    set()
+        - create set
+        - it takes iterable as argument i.e. x = set([3,5,7,4]) : list is iterable
+          output: x = {3,5,7,4}
+
+
+Deletion:
+    1. discard (value) -- takes one argument, value to be deleted, and it will throw error if value to be deleted is not present in set
+    2. remove(value)  -- takes one argument that is value to be deleted, and it will throw error if value to be deleted is not present in set
+    3. pop()          -- dont takes any argument, it will pop any random value and it returns the deleted value
+    4. clear()        -- makes set empty, no matter how many value set contain it will be empty
+
+Addition:
+    1. add(value) -- takes one value as argument, adds in any arbitary position because set is Unorderd
+    2. update([value, value, value,.......]) -- for adding multiple values, takes iterables
+
+Some important functions for SET:
+    - len(), min(), max(), sum(), any(), all(), sorted()
+     : any() -- returns true if any of the value is true(i.e. not 0 )
+        {2,3,5,0} -> true
+        {0,0} --> false
+        {5,7,8} -> true
+     : all() -- returns true if all the value is true 
+        {2,3,5,0} -> false
+        {0,0} --> false
+        {5,7,8} -> true
+
+SET Methods:
+    - union()    -- Returns union of two sets in ascending order
+    - intersection() -- Returns intersection of two sets
+    - difference()  -- Returns values present in set_one but not in set_two  (example: set_one.difference(set_two) )
+                    => this will only show values it will not change set itself, if you want to change set then use difference_update
+    - symmetric_difference() -- Returns values which are not present in any of two sets but not in  both set
+    - intersection_update() -- update the set with calculated value of intersection
+    - difference_update() -- update the set with calculated difference (set2.difference_update(set1) then set2 will be updated with difference value)
+    - copy() -- copies the set
+    - isdisjoint() -- Returns true if there is no any common value in both the sets (true if intersection is empty)
+    - issubset() -- Returns true if subset of set
+    - issuperset() -- Returns true in case of superset
+
+    
